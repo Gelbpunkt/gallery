@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.app.Activity
 import android.content.ClipData
@@ -12,13 +12,12 @@ import android.view.ViewGroup
 import androidx.annotation.IdRes
 import androidx.annotation.MenuRes
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.adapter.GridItemAdapter
-import com.example.gallery.databinding.FragmentAlbumBinding
 import com.google.android.material.transition.Hold
 import com.google.android.material.transition.MaterialSharedAxis
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.adapter.GridItemAdapter
+import org.kenvyra.gallery.databinding.FragmentAlbumBinding
 
 open class AlbumFrag : MediaFrag() {
     private lateinit var _binding: FragmentAlbumBinding

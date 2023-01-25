@@ -1,4 +1,4 @@
-package com.example.gallery.adapter
+package org.kenvyra.gallery.adapter
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
@@ -14,14 +14,13 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.signature.MediaStoreSignature
-import com.example.gallery.GlideApp
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.databinding.ViewPagerItemHolderBinding
-import com.example.gallery.ui.MainActivity
-import com.example.gallery.ui.VideoPlayerActivity
-import com.example.gallery.ui.ViewPagerFrag
-import java.util.*
+import org.kenvyra.gallery.GlideApp
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.databinding.ViewPagerItemHolderBinding
+import org.kenvyra.gallery.ui.MainActivity
+import org.kenvyra.gallery.ui.VideoPlayerActivity
+import org.kenvyra.gallery.ui.ViewPagerFrag
 import java.util.concurrent.atomic.AtomicBoolean
 
 class ViewPagerAdapter(val frag: ViewPagerFrag) : ListAdapter<ListItem.MediaItem,

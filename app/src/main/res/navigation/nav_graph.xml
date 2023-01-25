@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/bottomNavFrag"
-        android:name="com.example.gallery.ui.BottomNavFrag"
+        android:name="org.kenvyra.gallery.ui.BottomNavFrag"
         android:label="fragment_bottom_nav"
-        tools:layout="@layout/fragment_bottom_nav" >
+        tools:layout="@layout/fragment_bottom_nav">
         <action
             android:id="@+id/action_bottomNavFrag_to_viewPagerFrag"
             app:destination="@id/viewPagerFrag" />
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewPagerFrag"
-        android:name="com.example.gallery.ui.ViewPagerFrag"
+        android:name="org.kenvyra.gallery.ui.ViewPagerFrag"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager">
         <argument
@@ -35,9 +35,9 @@
     </fragment>
     <fragment
         android:id="@+id/albumFrag"
-        android:name="com.example.gallery.ui.AlbumFrag"
+        android:name="org.kenvyra.gallery.ui.AlbumFrag"
         android:label="fragment_album_detail"
-        tools:layout="@layout/fragment_album" >
+        tools:layout="@layout/fragment_album">
         <action
             android:id="@+id/action_albumFrag_to_viewPagerFrag"
             app:destination="@id/viewPagerFrag" />
@@ -47,15 +47,15 @@
     </fragment>
     <fragment
         android:id="@+id/binFrag"
-        android:name="com.example.gallery.ui.BinFrag"
+        android:name="org.kenvyra.gallery.ui.BinFrag"
         android:label="fragment_bin"
-        tools:layout="@layout/fragment_album" >
+        tools:layout="@layout/fragment_album">
         <action
             android:id="@+id/action_binFrag_to_viewPagerFrag"
             app:destination="@id/viewPagerFrag" />
     </fragment>
     <activity
         android:id="@+id/settingsActivity"
-        android:name="com.example.gallery.ui.SettingsActivity"
+        android:name="org.kenvyra.gallery.ui.SettingsActivity"
         android:label="SettingsActivity" />
 </navigation>

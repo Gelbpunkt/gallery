@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.Manifest
 import android.app.Activity
@@ -18,8 +18,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
-import com.example.gallery.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import org.kenvyra.gallery.databinding.ActivityMainBinding
 
 open class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -108,12 +108,14 @@ open class MainActivity : AppCompatActivity() {
                             selection += "(" + MediaStore.Files.FileColumns.MEDIA_TYPE + "=" +
                                     MediaStore.Files.FileColumns.MEDIA_TYPE_IMAGE + ")"
                         }
+
                         MediaStore.Video.Media.EXTERNAL_CONTENT_URI -> {
                             source = MediaStore.Files.getContentUri(MediaStore.VOLUME_EXTERNAL)
                             projection += MediaStore.Files.FileColumns.MEDIA_TYPE
                             selection += "(" + MediaStore.Files.FileColumns.MEDIA_TYPE + "=" +
                                     MediaStore.Files.FileColumns.MEDIA_TYPE_VIDEO + ")"
                         }
+
                         MediaStore.Files.getContentUri(MediaStore.VOLUME_EXTERNAL) -> {
                             source = intent.data
                             projection += MediaStore.Files.FileColumns.MEDIA_TYPE
@@ -127,6 +129,7 @@ open class MainActivity : AppCompatActivity() {
                                     MediaStore.Files.FileColumns.MEDIA_TYPE_VIDEO +
                                     ")"
                         }
+
                         else -> {
                             source = viewModel.convertMediaUriToContentUri(intent.data!!)
                             projection += MediaStore.Files.FileColumns.MEDIA_TYPE
@@ -142,6 +145,7 @@ open class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
+
                 intent.type != null -> {
                     if (intent.type!!.contains("image")) {
                         source = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
@@ -165,6 +169,7 @@ open class MainActivity : AppCompatActivity() {
                         selectionArgs = arrayOf(intent.type!!)
                     }
                 }
+
                 else -> {
                     projection += MediaStore.Files.FileColumns.MEDIA_TYPE
                     selection += "(" +
@@ -259,7 +264,8 @@ open class MainActivity : AppCompatActivity() {
                     if (Build.VERSION.SDK_INT >= 33) {
                         arrayOf(
                             Manifest.permission.READ_MEDIA_IMAGES,
-                            Manifest.permission.READ_MEDIA_VIDEO
+                            Manifest.permission.READ_MEDIA_VIDEO,
+                            Manifest.permission.ACCESS_MEDIA_LOCATION
                         )
                     } else {
                         arrayOf(

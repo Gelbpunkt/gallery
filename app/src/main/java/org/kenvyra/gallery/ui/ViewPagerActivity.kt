@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.Manifest
 import android.content.Intent
@@ -13,11 +13,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.view.WindowCompat
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.databinding.ActivityViewPagerBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.databinding.ActivityViewPagerBinding
 
 class ViewPagerActivity : AppCompatActivity() {
     private lateinit var binding: ActivityViewPagerBinding
@@ -88,7 +88,12 @@ class ViewPagerActivity : AppCompatActivity() {
                         MaterialAlertDialogBuilder(
                             this, R.style.ThemeOverlay_Material3_MaterialAlertDialog_Centered
                         )
-                            .setMessage(resources.getString(R.string.load_from_network, intent.data))
+                            .setMessage(
+                                resources.getString(
+                                    R.string.load_from_network,
+                                    intent.data
+                                )
+                            )
                             .setPositiveButton(resources.getString(R.string.load)) { _, _ ->
                                 viewModel.setRecyclerViewItems(
                                     listOf(
@@ -109,6 +114,7 @@ class ViewPagerActivity : AppCompatActivity() {
                             }
                             .show()
                     }
+
                     else -> {
                         viewModel.setRecyclerViewItems(
                             listOf(
@@ -126,6 +132,7 @@ class ViewPagerActivity : AppCompatActivity() {
                     }
                 }
             }
+
             "com.android.camera.action.REVIEW", MediaStore.ACTION_REVIEW -> {
                 if (!MainActivity.haveStoragePermission(this)) {
                     MainActivity.requestStoragePermission(
@@ -156,6 +163,7 @@ class ViewPagerActivity : AppCompatActivity() {
                     selectionArgs
                 )
             }
+
             MediaStore.ACTION_REVIEW_SECURE -> {
                 // Todo: needs testing
                 setShowWhenLocked(true)

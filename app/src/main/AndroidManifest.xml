@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gallery"
+    package="org.kenvyra.gallery"
     android:installLocation="auto">
 
     <uses-permission
@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyApplication"
+        android:name=".GalleryApplication"
         android:allowBackup="true"
         android:fullBackupOnly="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,7 +33,7 @@
             android:exported="true">
 
             <!--
-        according to
+             according to
              https://developer.android.com/reference/android/content/Intent#ACTION_VIEW
              https://developer.android.com/reference/android/provider/MediaStore#ACTION_REVIEW
              https://developer.android.com/reference/android/provider/MediaStore#ACTION_REVIEW_SECURE
@@ -155,7 +155,7 @@
 
         <provider
             android:name=".MySuggestionProvider"
-            android:authorities="com.example.gallery.MySuggestionProvider"
+            android:authorities="org.kenvyra.gallery.MySuggestionProvider"
             android:exported="false" />
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.app.Application
 import android.app.RecoverableSecurityException
@@ -15,9 +15,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.gallery.Album
-import com.example.gallery.ListItem
 import kotlinx.coroutines.*
+import org.kenvyra.gallery.Album
+import org.kenvyra.gallery.ListItem
 import java.util.*
 
 /**

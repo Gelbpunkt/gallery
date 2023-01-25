@@ -1,4 +1,4 @@
-package com.example.gallery
+package org.kenvyra.gallery
 
 import androidx.recyclerview.widget.DiffUtil
 

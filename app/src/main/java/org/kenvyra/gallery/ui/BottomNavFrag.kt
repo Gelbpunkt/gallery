@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -14,17 +14,17 @@ import androidx.core.view.updatePadding
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.transition.TransitionManager
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.adapter.GridAlbumAdapter
-import com.example.gallery.adapter.GridItemAdapter
-import com.example.gallery.databinding.FragmentBottomNavBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.transition.Hold
 import com.google.android.material.transition.MaterialFadeThrough
 import com.google.android.material.transition.MaterialSharedAxis
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.adapter.GridAlbumAdapter
+import org.kenvyra.gallery.adapter.GridItemAdapter
+import org.kenvyra.gallery.databinding.FragmentBottomNavBinding
 
 class BottomNavFrag : MediaFrag() {
     private lateinit var _binding: FragmentBottomNavBinding
@@ -70,12 +70,14 @@ class BottomNavFrag : MediaFrag() {
                             )
                             return@setOnMenuItemClickListener true
                         }
+
                         R.id.miSettings -> {
                             findNavController().navigate(
                                 R.id.action_bottomNavFrag_to_settingsActivity
                             )
                             return@setOnMenuItemClickListener true
                         }
+
                         else -> return@setOnMenuItemClickListener false
                     }
                 }

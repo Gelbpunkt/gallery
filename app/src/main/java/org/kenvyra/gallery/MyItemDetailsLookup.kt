@@ -1,9 +1,9 @@
-package com.example.gallery
+package org.kenvyra.gallery
 
 import android.view.MotionEvent
 import androidx.recyclerview.selection.ItemDetailsLookup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gallery.adapter.GridItemAdapter
+import org.kenvyra.gallery.adapter.GridItemAdapter
 
 class MyItemDetailsLookup(private val recyclerView: RecyclerView) :
     ItemDetailsLookup<Long>() {

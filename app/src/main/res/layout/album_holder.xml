@@ -24,11 +24,11 @@
             android:layout_height="match_parent"
             android:background="?attr/customColorValue"
             android:clickable="true"
+            android:contentDescription="image"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/avatars"
-            android:contentDescription="image" />
+            tools:srcCompat="@tools:sample/avatars" />
     </androidx.cardview.widget.CardView>
 
 

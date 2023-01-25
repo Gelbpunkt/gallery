@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.os.Bundle
 import android.provider.SearchRecentSuggestions
@@ -6,8 +6,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.example.gallery.MySuggestionProvider
-import com.example.gallery.R
+import org.kenvyra.gallery.MySuggestionProvider
+import org.kenvyra.gallery.R
 
 class SettingsActivity : AppCompatActivity() {
 

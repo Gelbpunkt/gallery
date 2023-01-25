@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.app.Activity
 import android.content.Intent
@@ -10,7 +10,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.SharedElementCallback
-import androidx.core.view.*
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.view.isVisible
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -18,18 +22,18 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionManager
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.adapter.ViewHolderPager
-import com.example.gallery.adapter.ViewPagerAdapter
-import com.example.gallery.databinding.EditTextBinding
-import com.example.gallery.databinding.FragmentViewPagerBinding
-import com.example.gallery.databinding.ViewDialogInfoBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialFade
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.adapter.ViewHolderPager
+import org.kenvyra.gallery.adapter.ViewPagerAdapter
+import org.kenvyra.gallery.databinding.EditTextBinding
+import org.kenvyra.gallery.databinding.FragmentViewPagerBinding
+import org.kenvyra.gallery.databinding.ViewDialogInfoBinding
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
 import kotlin.collections.set
 
 class ViewPagerFrag : Fragment() {
@@ -51,6 +55,7 @@ class ViewPagerFrag : Fragment() {
                     (binding.viewPager.adapter as ViewPagerAdapter).submitList(items)
                 }
             }
+
             currentAlbumName != null -> {
                 viewModel.albums.observe(viewLifecycleOwner) { albums ->
                     val items =
@@ -58,6 +63,7 @@ class ViewPagerFrag : Fragment() {
                     (binding.viewPager.adapter as ViewPagerAdapter).submitList(items)
                 }
             }
+
             else -> {
                 viewModel.viewPagerItems.observe(viewLifecycleOwner) { items ->
                     (binding.viewPager.adapter as ViewPagerAdapter).submitList(items)
@@ -91,11 +97,13 @@ class ViewPagerFrag : Fragment() {
                 currentAlbumName == MediaFrag.binFragID -> {
                     adapter.submitList(viewModel.binItems.value)
                 }
+
                 currentAlbumName != null -> {
                     adapter.submitList(viewModel.albums.value?.find {
                         it.name == currentAlbumName
                     }?.mediaItems)
                 }
+
                 else -> {
                     adapter.submitList(viewModel.viewPagerItems.value)
                 }

@@ -1,4 +1,4 @@
-package com.example.gallery.adapter
+package org.kenvyra.gallery.adapter
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.signature.MediaStoreSignature
-import com.example.gallery.Album
-import com.example.gallery.GlideApp
-import com.example.gallery.R
-import com.example.gallery.databinding.AlbumHolderBinding
-import com.example.gallery.ui.BottomNavFrag
-import com.example.gallery.ui.MainActivity
 import com.google.android.material.navigation.NavigationBarView
+import org.kenvyra.gallery.Album
+import org.kenvyra.gallery.GlideApp
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.databinding.AlbumHolderBinding
+import org.kenvyra.gallery.ui.BottomNavFrag
+import org.kenvyra.gallery.ui.MainActivity
 
 class GridAlbumAdapter(private val frag: BottomNavFrag) : ListAdapter<Album,
         AlbumHolder>(Album.DiffCallback) {

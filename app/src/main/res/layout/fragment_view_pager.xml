@@ -54,14 +54,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         android:clickable="true"
+        android:fitsSystemWindows="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cvEdit"
-        app:layout_constraintStart_toStartOf="parent"
-        android:fitsSystemWindows="true">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tvShare"
@@ -83,14 +83,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         android:clickable="true"
+        android:fitsSystemWindows="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cvInfo"
-        app:layout_constraintStart_toEndOf="@+id/cvShare"
-        android:fitsSystemWindows="true">
+        app:layout_constraintStart_toEndOf="@+id/cvShare">
 
         <TextView
             android:id="@+id/tvEdit"
@@ -112,14 +112,14 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         android:clickable="true"
+        android:fitsSystemWindows="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cvBin"
-        app:layout_constraintStart_toEndOf="@+id/cvEdit"
-        android:fitsSystemWindows="true">
+        app:layout_constraintStart_toEndOf="@+id/cvEdit">
 
         <TextView
             android:id="@+id/tvInfo"

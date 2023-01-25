@@ -4,10 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingStart="15dp"
-    android:paddingEnd="0dp"
     android:paddingTop="40dp"
+    android:paddingEnd="0dp"
     android:paddingBottom="15dp"
     android:text="@string/date"
     android:textColor="?attr/colorOnSurface"
-    android:textSize="26sp">
-</TextView>
+    android:textSize="26sp"></TextView>

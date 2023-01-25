@@ -1,15 +1,12 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
-import android.app.SearchManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.adapter.GridItemAdapter
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.adapter.GridItemAdapter
 
 class SearchResultsFrag : AlbumFrag() {
 

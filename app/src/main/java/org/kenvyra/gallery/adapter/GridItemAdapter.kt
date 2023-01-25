@@ -1,4 +1,4 @@
-package com.example.gallery.adapter
+package org.kenvyra.gallery.adapter
 
 import android.app.Activity
 import android.app.SearchManager
@@ -23,18 +23,19 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.signature.MediaStoreSignature
-import com.example.gallery.GlideApp
-import com.example.gallery.ListItem
-import com.example.gallery.R
-import com.example.gallery.databinding.LayoutSearchBinding
-import com.example.gallery.databinding.ListGridHeaderBinding
-import com.example.gallery.databinding.ListGridMediaItemHolderBinding
-import com.example.gallery.ui.MainActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.ShapeAppearanceModel
+import org.kenvyra.gallery.GlideApp
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.databinding.LayoutSearchBinding
+import org.kenvyra.gallery.databinding.ListGridHeaderBinding
+import org.kenvyra.gallery.databinding.ListGridMediaItemHolderBinding
+import org.kenvyra.gallery.ui.MainActivity
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Date
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**

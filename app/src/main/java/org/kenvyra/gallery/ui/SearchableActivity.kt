@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.app.SearchManager
 import android.content.Intent
@@ -7,16 +7,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.SearchRecentSuggestions
-import androidx.activity.result.IntentSenderRequest
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import com.example.gallery.ListItem
-import com.example.gallery.MySuggestionProvider
-import com.example.gallery.databinding.ActivitySearchableBinding
-import java.text.SimpleDateFormat
-import java.util.*
+import org.kenvyra.gallery.MySuggestionProvider
+import org.kenvyra.gallery.databinding.ActivitySearchableBinding
 
 class SearchableActivity : MainActivity() {
     private lateinit var binding: ActivitySearchableBinding

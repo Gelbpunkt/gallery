@@ -5,7 +5,7 @@
     <item
         android:id="@+id/miTrash"
         android:title="@string/bin"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/miSettings"

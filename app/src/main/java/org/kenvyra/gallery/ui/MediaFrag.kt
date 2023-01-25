@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.content.res.Configuration
 import android.os.Build
@@ -8,7 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.annotation.MenuRes
-import androidx.annotation.RequiresApi
 import androidx.core.app.SharedElementCallback
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
@@ -17,12 +16,12 @@ import androidx.recyclerview.selection.SelectionTracker
 import androidx.recyclerview.selection.StorageStrategy
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gallery.ListItem
-import com.example.gallery.MyItemDetailsLookup
-import com.example.gallery.MyItemKeyProvider
-import com.example.gallery.R
-import com.example.gallery.adapter.GridItemAdapter
 import com.google.android.material.appbar.AppBarLayout
+import org.kenvyra.gallery.ListItem
+import org.kenvyra.gallery.MyItemDetailsLookup
+import org.kenvyra.gallery.MyItemKeyProvider
+import org.kenvyra.gallery.R
+import org.kenvyra.gallery.adapter.GridItemAdapter
 
 open class MediaFrag : Fragment() {
     protected var actionMode: ActionMode? = null
@@ -185,7 +184,9 @@ open class MediaFrag : Fragment() {
                         }
                         actionMode?.finish()
 
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) viewModel.permanentlyDeleteItems(items)
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) viewModel.permanentlyDeleteItems(
+                            items
+                        )
                         true
                     }
 
@@ -248,6 +249,6 @@ open class MediaFrag : Fragment() {
     }
 
     companion object {
-        const val binFragID: String = "com.example.gallery.ui.BinFrag"
+        const val binFragID: String = "org.kenvyra.gallery.ui.BinFrag"
     }
 }

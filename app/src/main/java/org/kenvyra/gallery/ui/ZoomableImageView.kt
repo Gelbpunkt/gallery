@@ -1,15 +1,14 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.content.Context
 import android.graphics.Matrix
 import android.graphics.PointF
 import android.util.AttributeSet
-import android.util.Log
 import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener
 import androidx.appcompat.widget.AppCompatImageView
-import com.example.gallery.R
+import org.kenvyra.gallery.R
 import kotlin.math.abs
 
 class ZoomableImageView @JvmOverloads constructor(
@@ -82,6 +81,7 @@ class ZoomableImageView @JvmOverloads constructor(
                     currentInstance.start.set(currentInstance.last)
                     currentInstance.mode = DRAG
                 }
+
                 MotionEvent.ACTION_MOVE -> if (currentInstance.mode == DRAG) {
                     val deltaX = curr.x - currentInstance.last.x
                     val deltaY = curr.y - currentInstance.last.y
@@ -101,12 +101,14 @@ class ZoomableImageView @JvmOverloads constructor(
                     currentInstance.fixTrans()
                     currentInstance.last[curr.x] = curr.y
                 }
+
                 MotionEvent.ACTION_UP -> {
                     currentInstance.mode = NONE
                     val xDiff = abs(curr.x - currentInstance.start.x).toInt()
                     val yDiff = abs(curr.y - currentInstance.start.y).toInt()
                     if (xDiff < CLICK && yDiff < CLICK) performClick()
                 }
+
                 MotionEvent.ACTION_POINTER_UP -> currentInstance.mode = NONE
             }
             currentInstance.imageMatrix = currentInstance.mMatrix
@@ -247,7 +249,9 @@ class ZoomableImageView @JvmOverloads constructor(
         if (saveScale == 1f) {
             // Fit to screen.
             val scale: Float
-            if ((drawable?.intrinsicWidth ?: 0) == 0 || (drawable?.intrinsicHeight ?: 0) == 0) return
+            if ((drawable?.intrinsicWidth ?: 0) == 0 || (drawable?.intrinsicHeight
+                    ?: 0) == 0
+            ) return
             val bmWidth = drawable.intrinsicWidth
             val bmHeight = drawable.intrinsicHeight
             // Log.d("bmSize", "bmWidth: $bmWidth bmHeight : $bmHeight")

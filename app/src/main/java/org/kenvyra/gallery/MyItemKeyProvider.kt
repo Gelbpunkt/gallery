@@ -1,10 +1,9 @@
-package com.example.gallery
+package org.kenvyra.gallery
 
 import androidx.recyclerview.selection.ItemKeyProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gallery.ui.MainActivity
-import com.example.gallery.ui.MainViewModel
-import com.example.gallery.ui.MediaFrag
+import org.kenvyra.gallery.ui.MainViewModel
+import org.kenvyra.gallery.ui.MediaFrag
 
 class MyItemKeyProvider(
     private val viewModel: MainViewModel,
@@ -16,10 +15,12 @@ class MyItemKeyProvider(
             albumName == MediaFrag.binFragID -> {
                 viewModel.binItems.value?.get(position)?.id
             }
+
             albumName != null -> {
                 viewModel.albums.value?.find { it.name == albumName }?.mediaItems
                     ?.get(position)?.id
             }
+
             else -> {
                 viewModel.recyclerViewItems.value?.get(position)?.id
             }
@@ -32,10 +33,12 @@ class MyItemKeyProvider(
                 viewModel.binItems.value?.indexOfFirst { it.id == key }
                     ?: RecyclerView.NO_POSITION
             }
+
             albumName != null -> {
                 viewModel.albums.value?.find { it.name == albumName }?.mediaItems
                     ?.indexOfFirst { it.id == key } ?: RecyclerView.NO_POSITION
             }
+
             else -> {
                 viewModel.recyclerViewItems.value?.indexOfFirst { it.id == key }
                     ?: RecyclerView.NO_POSITION

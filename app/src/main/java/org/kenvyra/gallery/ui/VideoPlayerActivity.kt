@@ -1,4 +1,4 @@
-package com.example.gallery.ui
+package org.kenvyra.gallery.ui
 
 import android.net.Uri
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.os.Looper
 import android.view.MenuItem
 import android.widget.MediaController
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gallery.databinding.ActivityVideoPlayerBinding
+import org.kenvyra.gallery.databinding.ActivityVideoPlayerBinding
 
 class VideoPlayerActivity : AppCompatActivity() {
 

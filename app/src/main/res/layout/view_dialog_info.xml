@@ -39,8 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
             android:text="·"
             android:textColor="?attr/colorOnSurface"
             android:textSize="16sp"
@@ -51,8 +51,8 @@
         <TextView
             android:id="@+id/tvTimeAdded"
             android:layout_width="0dp"
-            android:layout_marginTop="5dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="0:00"
             android:textColor="?attr/colorOnSurface"
             android:textSize="16sp"
@@ -240,23 +240,23 @@
             android:id="@+id/btnEditDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:minWidth="48dp"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDescriptionHolder"
-            app:srcCompat="@drawable/ic_baseline_edit_24"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <ImageButton
             android:id="@+id/btnLeaveApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:minWidth="48dp"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLocationHolder"
-            app:srcCompat="@drawable/ic_baseline_exit_to_app_24"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
