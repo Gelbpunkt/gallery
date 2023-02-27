@@ -66,6 +66,6 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
 
     // Glide
-    implementation("com.github.bumptech.glide:glide:4.14.2")
-    kapt("com.github.bumptech.glide:compiler:4.14.2")
+    implementation("com.github.bumptech.glide:glide:4.15.0")
+    kapt("com.github.bumptech.glide:compiler:4.15.0")
 }
